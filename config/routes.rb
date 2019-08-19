@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :tasks
   
   get "signup", to: "users#new"
-  resources :users, only: [:index, :show, :create]
+  resources :users, only: [:create]
   
   get "login", to: "sessions#new"
   post "login", to: "sessions#create"
